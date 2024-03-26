@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" >
+</head>
+<body>
+    <img src="b.jpg" alt="" class="b">
+
+    <div class="signup">
+        <h4>Already a member? <a href="login.html">Log in now</a></h4>
+    
+        <h2>Sign up for an account</h2>
+        <a href="https://www.google.com/"><button id="g"> <i class="bi bi-google" ></i>Google</button></a>
+        <a href="https://www.facebook.com/"><button id="f"> <i class="bi bi-facebook"></i> Facebook</button></a>
+         <h3> or </h3>
+         <hr>
+        <form action="">
+            <h3 id="name">Full name</h3>
+            <input type="text" placeholder="Enter your full name" class="inp">
+            <h3>Email</h3>
+            <input type="email" placeholder="eg.  nnkechii@gmail.com" class="inp">
+            <h3>Password </h3>
+            <div class="pass">
+              <input type="password" placeholder="............." id="password">
+              <i class="bi bi-eye-slash" id="eyeicon" onclick="ChangeIcon(this)"></i>
+           
+            </div>
+            <h3>Confirm Password</h3>
+            <div class="pass">
+            <input type="password" placeholder=".............">
+            <i class="bi bi-eye-slash" id="eyeicon" onclick="ChangeIcon(this)"></i>
+        </div>
+            <br>
+            <button id="btn">Sign Up <i class="bi bi-arrow-right"></i></button>
+        </form>
+    </div>
+
+
+    <script >
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+        let ChangeIcon = function (icon){
+            icon.classList.toggle('bi bi-eye')
+        }
+        eyeicon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                ChangeIcon(this)
+            } else{
+                password.type = "password";
+                eyeicon.classList.toggle('bi bi-eye')
+            }
+        }
+    </script>
+    <script src="project.js"></script>
+   
+</body>
+</html>
